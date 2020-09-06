@@ -1,4 +1,4 @@
-package PageObject;
+package ActionClasses;
 
 import manager.FileReaderManager;
 import org.openqa.selenium.WebDriver;
@@ -6,12 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import utility.SeleniumUtility;
 
-public class CommonActions extends SeleniumUtility {
-    public CommonActions(WebDriver driver) {
+public class CommonUIActions extends SeleniumUtility {
+    public CommonUIActions(WebDriver driver) {
         super(driver);
     }
 
-    @FindBy  (id = "onetrust-accept-btn-handler")
+    @FindBy  (xpath= "//button[text()='Accept All']")
     WebElement acceptCookies;
 
     public void openMainURL() {

@@ -1,31 +1,28 @@
 package manager;
 
 
-import PageObject.CommonActions;
-import PageObject.ContactFormPage;
-import PageObject.MagazinePage;
+import ActionClasses.CommonUIActions;
+import ActionClasses.LoginPage;
 import org.openqa.selenium.WebDriver;
 public class PageObjectManger {
 
 	public WebDriver driver;
-	public MagazinePage magazinePage;
-	public CommonActions commonActions;
-	public ContactFormPage contactFormPage;
+	public CommonUIActions commonUIActions;
+	public LoginPage loginPage;
 
 
 	public PageObjectManger(WebDriver driver) {
 		this.driver = driver;
 	}
 
-	public CommonActions getCommonActionsScreen() {
-		return (commonActions == null) ? commonActions = new CommonActions(driver) : commonActions;
+	public CommonUIActions getCommonActionsScreen() {
+		return (commonUIActions == null) ? commonUIActions = new CommonUIActions(driver) : commonUIActions;
 	}
-	public MagazinePage getMagazineScreen() {
-		return (magazinePage == null) ? magazinePage = new MagazinePage(driver) : magazinePage;
+
+	public LoginPage getLoginPage() {
+		return (loginPage == null) ? loginPage = new LoginPage(driver) : loginPage;
 	}
-	public ContactFormPage getContactFormPage() {
-		return (contactFormPage == null) ? contactFormPage = new ContactFormPage(driver) : contactFormPage;
-	}
+	
 
 }
 

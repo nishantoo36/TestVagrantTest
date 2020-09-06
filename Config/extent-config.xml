@@ -11,10 +11,10 @@
     <protocol>https</protocol>
     
     <!-- title of the document -->
-    <documentTitle>Tri - Cucumber Framework</documentTitle>
+    <documentTitle>TypeForm - Cucumber Framework</documentTitle>
     
     <!-- report name - displayed at top-nav -->
-    <reportName>TRI - Cucumber Report</reportName>
+    <reportName>TypeForm - Cucumber Report</reportName>
     
     <!-- global date format override -->  <!-- defaults to yyyy-MM-dd -->
     <dateFormat>yyyy-MM-dd</dateFormat>

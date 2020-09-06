@@ -1,22 +1,22 @@
 package StepFiles;
-import PageObject.CommonActions;
+import ActionClasses.CommonUIActions;
 import cucumber.api.java.en.Given;
 import cucumberHelper.TestContext;
 
 public class PreconditionSteps extends Logging {
 
     TestContext testContext;
-    CommonActions commonActions;
+    CommonUIActions commonUIActions;
 
     public PreconditionSteps(TestContext context) {
         testContext = context;
-        commonActions = testContext.getPageObjectManger().getCommonActionsScreen();
+        commonUIActions = testContext.getPageObjectManger().getCommonActionsScreen();
     }
 
-    @Given("User should be on MagazinePage")
-    public void userShouldBeOnMagazinePage() {
-        log("test");
-        commonActions.openMainURL();
-        commonActions.setAcceptCookies();
+    @Given("User should be on Login Page")
+    public void userShouldBeOnLoginPage() {
+        commonUIActions.openMainURL();
+        commonUIActions.setAcceptCookies();
+        log("User is on Login page");
     }
 }

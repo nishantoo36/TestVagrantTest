@@ -3,33 +3,36 @@ package manager;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import java.net.MalformedURLException;
+import java.util.Collections;
 
-public class DriverFactory {
 
+public class DriverFactor {
+
+    public static String scenarioName;
     private WebDriver driver;
     private String browser;
 
-    public DriverFactory() {
+    public DriverFactor() {
         browser = FileReaderManager.getInstance().getConfigReader().getBrowserName();
     }
 
     public WebDriver getDriver() {
         if (driver == null)
-            try {
-                driver = startDriver();
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            }
+            driver = startDriver();
         return driver;
     }
 
-    private WebDriver startDriver() throws MalformedURLException {
+    private WebDriver startDriver() {
         if ("Chrome".equalsIgnoreCase(browser)) {
+            ChromeOptions options = new ChromeOptions();
+            options.setHeadless(false);
+            options.setExperimentalOption("useAutomationExtension", false);
+            options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(options);
             driver.manage().window().maximize();
         } else if ("FireFox".equalsIgnoreCase(browser)) {
             WebDriverManager.firefoxdriver().setup();
@@ -43,5 +46,6 @@ public class DriverFactory {
     public void closeDriver() {
         driver.quit();
     }
+
 
 }

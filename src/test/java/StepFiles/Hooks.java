@@ -7,7 +7,6 @@ import cucumber.api.java.Before;
 import cucumberHelper.TestContext;
 import org.testng.annotations.BeforeClass;
 import utility.SeleniumUtility;
-
 import java.io.File;
 import java.io.IOException;
 
@@ -15,9 +14,8 @@ import static utility.ConstantVars.*;
 
 
 public class Hooks {
-
-	TestContext testContext;
 	public static Scenario scenario;
+	TestContext testContext;
 
 	public Hooks(TestContext context) {
 		testContext = context;
@@ -33,8 +31,6 @@ public class Hooks {
 		featureName = scenario.getId().split(";")[0];
 		System.out.println("-----------------Start of Scenario-----------------");
 		System.out.println(scenario.getName());
-
-
 	}
 
 	@After(order = 0)

@@ -1,24 +1,18 @@
 package cucumberHelper;
-
-import com.sun.media.sound.InvalidFormatException;
-import manager.DriverFactory;
+import manager.DriverFactor;
 import manager.PageObjectManger;
 
-import java.io.IOException;
-
 public class TestContext {
-
 	private PageObjectManger pageObjectManger;
-	private DriverFactory driverFactory;
+	private DriverFactor driverFactory;
 	public ScenarioContext scenarioContext;
-
-	public TestContext() throws InvalidFormatException, IOException {
-		driverFactory = new DriverFactory();
+	public TestContext(){
+		driverFactory = new DriverFactor();
 		pageObjectManger = new PageObjectManger(driverFactory.getDriver());
 		scenarioContext = new ScenarioContext();
 	}
 
-	public DriverFactory getDriverFactory() {
+	public DriverFactor getDriverFactory() {
 		return driverFactory;
 	}
 

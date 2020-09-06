@@ -2,7 +2,6 @@ package utility;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -12,7 +11,6 @@ import org.testng.Assert;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.ArrayList;
 
 public class SeleniumUtility {
 
@@ -34,9 +32,9 @@ public class SeleniumUtility {
         }
     }
 
-    protected void clickOnElement(WebElement ele,int  waitTime) {
+    protected void clickOnElement(WebElement ele, int waitTime) {
         if (isElementAvailable(ele, waitTime)) {
-            if (isElementClickAble(ele, waitTime/2)) {
+            if (isElementClickAble(ele, waitTime / 2)) {
                 ele.click();
             } else {
                 Assert.fail(ele + "is not clickable");
@@ -46,7 +44,7 @@ public class SeleniumUtility {
         }
     }
 
-    protected void enterValue(WebElement ele, String val,int  waitTime) {
+    protected void enterValue(WebElement ele, String val, int waitTime) {
         if (isElementAvailable(ele, waitTime)) {
             ele.sendKeys(val);
         } else {
@@ -99,30 +97,16 @@ public class SeleniumUtility {
         driver.get(url);
     }
 
-    protected void pressKeyBoardEnter(WebElement ele) {
-        ele.sendKeys(Keys.ENTER);
-    }
 
-    protected String getText(WebElement ele,int time) {
-        if(isElementAvailable(ele,time)) {
+    protected String getText(WebElement ele, int time) {
+        if (isElementAvailable(ele, time)) {
             return ele.getText();
         }
-        throw  new RuntimeException("Element is not available");
+        throw new RuntimeException("Element is not available");
     }
 
-    protected void switchToNewlyOpenTap(){
-        int tabNo = driver.getWindowHandles().size();
-        System.out.println(tabNo);
-        ArrayList<String> windowHandles = new ArrayList<String> (driver.getWindowHandles());
-        driver.switchTo().window(windowHandles.get(tabNo-1));
+    protected String getPageTitle() {
+        return driver.getTitle();
     }
 
-    protected void scrollToElement(WebElement ele){
-        Actions actions = new Actions(driver);
-        actions.moveToElement(ele).build().perform();
-    }
-
-    protected String getCurrentPageUrl(){
-       return driver.getCurrentUrl();
-    }
 }
