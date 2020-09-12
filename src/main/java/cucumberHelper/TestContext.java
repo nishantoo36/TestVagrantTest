@@ -1,14 +1,18 @@
 package cucumberHelper;
-import manager.DriverFactor;
-import manager.PageObjectManger;
+import manager.API.PageObjectMangerAPI;
+import manager.UI.DriverFactor;
+import manager.UI.PageObjectMangerUI;
 
 public class TestContext {
-	private PageObjectManger pageObjectManger;
+	private PageObjectMangerUI pageObjectMangerUI;
+	private PageObjectMangerAPI pageObjectMangerAPI;
+
 	private DriverFactor driverFactory;
 	public ScenarioContext scenarioContext;
 	public TestContext(){
 		driverFactory = new DriverFactor();
-		pageObjectManger = new PageObjectManger(driverFactory.getDriver());
+		pageObjectMangerUI = new PageObjectMangerUI(driverFactory.getDriver());
+		pageObjectMangerAPI = new PageObjectMangerAPI();
 		scenarioContext = new ScenarioContext();
 	}
 
@@ -16,8 +20,8 @@ public class TestContext {
 		return driverFactory;
 	}
 
-	public PageObjectManger getPageObjectManger() {
-		return pageObjectManger;
+	public PageObjectMangerUI getPageObjectMangerUI() {
+		return pageObjectMangerUI;
 	}
 
 	public ScenarioContext getScenarioContext() {

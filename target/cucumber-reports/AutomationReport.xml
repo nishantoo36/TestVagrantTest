@@ -1,32 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="26.949571">
-<testcase classname="ContactFormFilling" name="Fill the contact form" time="12.166937">
-<system-out><![CDATA[Given User should be on MagazinePage........................................passed
-When user click on contact link and navigate to contact form................passed
-Then current tab should appear as "https://magazine.trivago.com.au/contact/".passed
-When user enter value in message text box as "interview  Test data".........passed
-When user enter value in full name text box as "Interview Triv".............passed
-When user enter value in email text box as "intTest@test.com"...............passed
-When user check the checkbox for contact form...............................passed
-When user click on submit button............................................passed
-Then user should get message as "Message Sent Successfully!"................passed
-]]></system-out>
-</testcase>
-<testcase classname="SearchLocation" name="Click on Search and Enter Location" time="6.937474">
-<system-out><![CDATA[Given User should be on MagazinePage........................................passed
-When user click on search icon..............................................passed
-Then user should see the search field.......................................passed
-When user enter value in search box as "Canada" and search..................passed
-Then user should see all search result for "Canada".........................passed
-]]></system-out>
-</testcase>
-<testcase classname="SubscribeNewsLetter" name="Fill the contact form" time="7.84516">
-<system-out><![CDATA[Given User should be on MagazinePage........................................passed
-When user scroll down and navigate to news letter section...................passed
-Then user should see news letter section....................................passed
-When user enter random email address........................................passed
-When user click on Inspire Me button........................................passed
-Then user should get the "You are now checked-in!"..........................passed
-]]></system-out>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="5.230743">
+<testcase classname="ValidationTestForLogin" name="Test Validation for invalid UserName with correct format" time="5.230743">
+<failure message="org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status&#10;from disconnected: received Inspector.detached event&#10;  (Session info: chrome=85.0.4183.83)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'AHMnpatel2PJG5J', ip: '192.168.43.209', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '1.8.0_202'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.83, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/11/wrcgffs115x...}, goog:chromeOptions: {debuggerAddress: localhost:57293}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 9b09479384efd7c4e2b553b8d56905ae&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)&#10;&#9;at utility.SeleniumUtility.openUrl(SeleniumUtility.java:97)&#10;&#9;at ActionClasses.CommonUIActions.openMainURL(CommonUIActions.java:18)&#10;&#9;at StepFiles.PreconditionSteps.userShouldBeOnLoginPage(PreconditionSteps.java:18)&#10;&#9;at ✽.Given User should be on Login Page(UITest/ValidationTestForLogin.feature:4)&#10;"><![CDATA[Given User should be on Login Page..........................................failed
+Then user should see the "Log in | Typeform"................................skipped
+When user enter username as "test@test.com".................................skipped
+When user enter password as "Test@1234".....................................skipped
+When user click on login button.............................................skipped
+Then user get error message as "Your login info isn't right. Try again, or reset your password if it slipped your mind. ".skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=85.0.4183.83)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AHMnpatel2PJG5J', ip: '192.168.43.209', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '1.8.0_202'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.83, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/11/wrcgffs115x...}, goog:chromeOptions: {debuggerAddress: localhost:57293}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 9b09479384efd7c4e2b553b8d56905ae
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at utility.SeleniumUtility.openUrl(SeleniumUtility.java:97)
+	at ActionClasses.CommonUIActions.openMainURL(CommonUIActions.java:18)
+	at StepFiles.PreconditionSteps.userShouldBeOnLoginPage(PreconditionSteps.java:18)
+	at ✽.Given User should be on Login Page(UITest/ValidationTestForLogin.feature:4)
+]]></failure>
 </testcase>
 </testsuite>

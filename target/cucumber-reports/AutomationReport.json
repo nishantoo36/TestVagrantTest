@@ -10,17 +10,15 @@
         "keyword": "Background",
         "steps": [
           {
-            "output": [
-              "test\n"
-            ],
             "result": {
-              "duration": 4693416536,
-              "status": "passed"
+              "duration": 1049338520,
+              "error_message": "org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status\nfrom disconnected: received Inspector.detached event\n  (Session info: chrome\u003d85.0.4183.83)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027AHMnpatel2PJG5J\u0027, ip: \u0027192.168.43.209\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.6\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.83, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/11/wrcgffs115x...}, goog:chromeOptions: {debuggerAddress: localhost:57293}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 9b09479384efd7c4e2b553b8d56905ae\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)\n\tat utility.SeleniumUtility.openUrl(SeleniumUtility.java:97)\n\tat ActionClasses.CommonUIActions.openMainURL(CommonUIActions.java:18)\n\tat StepFiles.PreconditionSteps.userShouldBeOnLoginPage(PreconditionSteps.java:18)\n\tat ✽.Given User should be on Login Page(UITest/ValidationTestForLogin.feature:4)\n",
+              "status": "failed"
             },
             "line": 4,
-            "name": "User should be on MagazinePage",
+            "name": "User should be on Login Page",
             "match": {
-              "location": "PreconditionSteps.userShouldBeOnMagazinePage()"
+              "location": "PreconditionSteps.userShouldBeOnLoginPage()"
             },
             "keyword": "Given "
           }
@@ -30,7 +28,7 @@
         "before": [
           {
             "result": {
-              "duration": 1595445487,
+              "duration": 4083384678,
               "status": "passed"
             },
             "match": {
@@ -39,261 +37,7 @@
           },
           {
             "result": {
-              "duration": 702349,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.beforeScenario(Scenario)"
-            }
-          }
-        ],
-        "line": 17,
-        "name": "Fill the contact form",
-        "description": "",
-        "id": "contactformfilling;fill-the-contact-form;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 71890,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.afterScenario(Scenario)"
-            }
-          },
-          {
-            "result": {
-              "duration": 120118497,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.afterScenario()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "output": [
-              "Click on contact link and navigate to contact form page\n",
-              "Clicked on contact page and navigated to contact form page\n"
-            ],
-            "result": {
-              "duration": 521252906,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "user click on contact link and navigate to contact form",
-            "match": {
-              "location": "MagazinePageSteps.userClickOnContactLink()"
-            },
-            "keyword": "When "
-          },
-          {
-            "output": [
-              "Verify that user is on https://magazine.trivago.com.au/contact/ page\n",
-              "Verification pass successfully , user is on https://magazine.trivago.com.au/contact/ page\n"
-            ],
-            "result": {
-              "duration": 2464290425,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "current tab should appear as \"https://magazine.trivago.com.au/contact/\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "https://magazine.trivago.com.au/contact/",
-                  "offset": 30
-                }
-              ],
-              "location": "ContactFormPageSteps.currentTabShouldAppearAs(String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "output": [
-              "Enter Message in Contact form as interview  Test data\n",
-              "interview  Test data as Message entered\n"
-            ],
-            "result": {
-              "duration": 191477195,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "user enter value in message text box as \"interview  Test data\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "interview  Test data",
-                  "offset": 41
-                }
-              ],
-              "location": "ContactFormPageSteps.userEnterValueInMessageTextBoxAs(String)"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "When "
-          },
-          {
-            "output": [
-              "Enter full name in Contact form as Interview Triv\n",
-              "Interview Triv as full name entered\n"
-            ],
-            "result": {
-              "duration": 129091070,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "user enter value in full name text box as \"Interview Triv\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Interview Triv",
-                  "offset": 43
-                }
-              ],
-              "location": "ContactFormPageSteps.userEnterValueInFullNameTextBoxAs(String)"
-            },
-            "matchedColumns": [
-              1
-            ],
-            "keyword": "When "
-          },
-          {
-            "output": [
-              "Enter email in Contact form as intTest@test.com\n",
-              "intTest@test.com as email entered\n"
-            ],
-            "result": {
-              "duration": 120521619,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "user enter value in email text box as \"intTest@test.com\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "intTest@test.com",
-                  "offset": 39
-                }
-              ],
-              "location": "ContactFormPageSteps.userEnterValueInEmailTextBoxAs(String)"
-            },
-            "matchedColumns": [
-              2
-            ],
-            "keyword": "When "
-          },
-          {
-            "output": [
-              "Select check box in contact form\n",
-              "Check box selected\n"
-            ],
-            "result": {
-              "duration": 142881920,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "user check the checkbox for contact form",
-            "match": {
-              "location": "ContactFormPageSteps.userCheckTheCheckboxForContactForm()"
-            },
-            "keyword": "When "
-          },
-          {
-            "output": [
-              "Submit contact form\n",
-              "contact form is submitted\n"
-            ],
-            "result": {
-              "duration": 114125900,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "user click on submit button",
-            "match": {
-              "location": "ContactFormPageSteps.userClickOnSubmitButton()"
-            },
-            "keyword": "When "
-          },
-          {
-            "output": [
-              "Verify that after submitting contact form user should get message as Message Sent Successfully!\n",
-              "Verification  pass successfully , getting message Message Sent Successfully! after contact form submitted\n"
-            ],
-            "result": {
-              "duration": 2073541163,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "user should get message as \"Message Sent Successfully!\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Message Sent Successfully!",
-                  "offset": 28
-                }
-              ],
-              "location": "ContactFormPageSteps.userShouldGetMessageAs(String)"
-            },
-            "matchedColumns": [
-              3
-            ],
-            "keyword": "Then "
-          }
-        ]
-      }
-    ],
-    "name": "ContactFormFilling",
-    "description": "",
-    "id": "contactformfilling",
-    "keyword": "Feature",
-    "uri": "ContactFormFilling.feature"
-  },
-  {
-    "line": 2,
-    "elements": [
-      {
-        "line": 3,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "output": [
-              "test\n"
-            ],
-            "result": {
-              "duration": 3596688179,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "User should be on MagazinePage",
-            "match": {
-              "location": "PreconditionSteps.userShouldBeOnMagazinePage()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 915518235,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.Logging(Scenario)"
-            }
-          },
-          {
-            "result": {
-              "duration": 73346,
+              "duration": 679935,
               "status": "passed"
             },
             "match": {
@@ -302,14 +46,15 @@
           }
         ],
         "line": 6,
-        "name": "Click on Search and Enter Location",
+        "name": "Test Validation for invalid UserName with correct format",
         "description": "",
-        "id": "searchlocation;click-on-search-and-enter-location",
+        "id": "validationtestforlogin;test-validation-for-invalid-username-with-correct-format",
         "after": [
           {
             "result": {
-              "duration": 20804,
-              "status": "passed"
+              "duration": 6289060,
+              "error_message": "org.openqa.selenium.WebDriverException: chrome not reachable\n  (Session info: chrome\u003d85.0.4183.83)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027AHMnpatel2PJG5J\u0027, ip: \u0027192.168.43.209\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.6\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.83, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/11/wrcgffs115x...}, goog:chromeOptions: {debuggerAddress: localhost:57293}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 9b09479384efd7c4e2b553b8d56905ae\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\n\tat org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)\n\tat utility.SeleniumUtility.takeScreenShot(SeleniumUtility.java:27)\n\tat StepFiles.Hooks.afterScenario(Hooks.java:49)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\n\tat cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)\n\tat cucumber.runtime.Runtime.runHooks(Runtime.java:212)\n\tat cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:115)\n\tat org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:74)\n\tat org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:65)\n\tat org.testng.TestRunner$1.run(TestRunner.java:652)\n\tat java.util.ArrayList.forEach(ArrayList.java:1257)\n\tat org.testng.TestRunner.runJUnitWorkers(TestRunner.java:843)\n\tat org.testng.TestRunner.privateRunJUnit(TestRunner.java:681)\n\tat org.testng.TestRunner.run(TestRunner.java:585)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:384)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:286)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1109)\n\tat org.testng.TestNG.runSuites(TestNG.java:1039)\n\tat org.testng.TestNG.run(TestNG.java:1007)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)\n\tat org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)\n",
+              "status": "failed"
             },
             "match": {
               "location": "Hooks.afterScenario(Scenario)"
@@ -317,7 +62,7 @@
           },
           {
             "result": {
-              "duration": 93344431,
+              "duration": 91051259,
               "status": "passed"
             },
             "match": {
@@ -329,260 +74,91 @@
         "keyword": "Scenario",
         "steps": [
           {
-            "output": [
-              "Click on Search icon\n",
-              "Clicked on search icon\n"
-            ],
             "result": {
-              "duration": 140775688,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 7,
-            "name": "user click on search icon",
-            "match": {
-              "location": "MagazinePageSteps.userClickOnSearchIcon()"
-            },
-            "keyword": "When "
-          },
-          {
-            "output": [
-              "Verify that search text box is displayed or not\n",
-              "Verification pass , Search textBox is displayed\n"
-            ],
-            "result": {
-              "duration": 1965330390,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "user should see the search field",
-            "match": {
-              "location": "MagazinePageSteps.userShouldSeeTheSearchField()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "output": [
-              "Enter value in search textBox as Canada and press Enter\n",
-              "Canada entered in search text box and pressed Enter \n"
-            ],
-            "result": {
-              "duration": 214234824,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "user enter value in search box as \"Canada\" and search",
+            "name": "user should see the \"Log in | Typeform\"",
             "match": {
               "arguments": [
                 {
-                  "val": "Canada",
-                  "offset": 35
-                }
-              ],
-              "location": "MagazinePageSteps.userEnterValueInSearchBoxAs(String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "output": [
-              "Verify that all search result should appear for Canada location \n",
-              "Verification pass , All search result is having search value as Canada\n"
-            ],
-            "result": {
-              "duration": 11488354,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "user should see all search result for \"Canada\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Canada",
-                  "offset": 39
-                }
-              ],
-              "location": "MagazinePageSteps.userShouldSeeAllSearchResultFor(String)"
-            },
-            "keyword": "Then "
-          }
-        ]
-      }
-    ],
-    "name": "SearchLocation",
-    "description": "",
-    "id": "searchlocation",
-    "keyword": "Feature",
-    "uri": "SearchLocation.feature"
-  },
-  {
-    "line": 1,
-    "elements": [
-      {
-        "line": 3,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "output": [
-              "test\n"
-            ],
-            "result": {
-              "duration": 4240162446,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "User should be on MagazinePage",
-            "match": {
-              "location": "PreconditionSteps.userShouldBeOnMagazinePage()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 904140937,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.Logging(Scenario)"
-            }
-          },
-          {
-            "result": {
-              "duration": 42831,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.beforeScenario(Scenario)"
-            }
-          }
-        ],
-        "line": 15,
-        "name": "Fill the contact form",
-        "description": "",
-        "id": "subscribenewsletter;fill-the-contact-form;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 18817,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.afterScenario(Scenario)"
-            }
-          },
-          {
-            "result": {
-              "duration": 88802667,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.afterScenario()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "output": [
-              "Scroll to the news letter section\n"
-            ],
-            "result": {
-              "duration": 132624381,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "user scroll down and navigate to news letter section",
-            "match": {
-              "location": "MagazinePageSteps.userScrollDownAndNavigateToNewsLetterSection()"
-            },
-            "keyword": "When "
-          },
-          {
-            "output": [
-              "Verify that news letter section is appear\n",
-              "Verification passed, News letter section is appearing\n"
-            ],
-            "result": {
-              "duration": 31734219,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "user should see news letter section",
-            "match": {
-              "location": "MagazinePageSteps.userShouldSeeNewsLetterSection()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "output": [
-              "Enter Email address as Test1597212634@mailinator.com\n",
-              "Test1597212634@mailinator.com email is entered\n"
-            ],
-            "result": {
-              "duration": 170945614,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "user enter random email address",
-            "match": {
-              "location": "MagazinePageSteps.userEnterRandomEmailAddress()"
-            },
-            "keyword": "When "
-          },
-          {
-            "output": [
-              "Submit News letter\n",
-              "News  letter submitted\n"
-            ],
-            "result": {
-              "duration": 109792230,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "user click on Inspire Me button",
-            "match": {
-              "location": "MagazinePageSteps.userClickOnInspireMeButton()"
-            },
-            "keyword": "When "
-          },
-          {
-            "output": [
-              "Verify that after submitting news letter You are now checked-in! appear\n",
-              "Verification passed, You are now checked-in! is appearing after submitting news letter\n"
-            ],
-            "result": {
-              "duration": 2166896012,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "user should get the \"You are now checked-in!\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "You are now checked-in!",
+                  "val": "Log in | Typeform",
                   "offset": 21
                 }
               ],
-              "location": "MagazinePageSteps.userShouldGetThe(String)"
+              "location": "LoginPageSteps.userShouldSeeThe(String)"
             },
-            "matchedColumns": [
-              0
-            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "user enter username as \"test@test.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "test@test.com",
+                  "offset": 24
+                }
+              ],
+              "location": "LoginPageSteps.userEnterUsernameAs(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "user enter password as \"Test@1234\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Test@1234",
+                  "offset": 24
+                }
+              ],
+              "location": "LoginPageSteps.userEnterPasswordAs(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "user click on login button",
+            "match": {
+              "location": "LoginPageSteps.userClickOnLoginButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "user get error message as \"Your login info isn\u0027t right. Try again, or reset your password if it slipped your mind. \"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your login info isn\u0027t right. Try again, or reset your password if it slipped your mind. ",
+                  "offset": 27
+                }
+              ],
+              "location": "LoginPageSteps.userGetErrorMessageAs(String)"
+            },
             "keyword": "Then "
           }
         ]
       }
     ],
-    "name": "SubscribeNewsLetter",
+    "name": "ValidationTestForLogin",
     "description": "",
-    "id": "subscribenewsletter",
+    "id": "validationtestforlogin",
     "keyword": "Feature",
-    "uri": "SubscribeNewsLetter.feature"
+    "uri": "UITest/ValidationTestForLogin.feature"
   }
 ]

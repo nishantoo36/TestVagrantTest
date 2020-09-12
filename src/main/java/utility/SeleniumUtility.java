@@ -11,6 +11,8 @@ import org.testng.Assert;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SeleniumUtility {
 
@@ -44,8 +46,9 @@ public class SeleniumUtility {
         }
     }
 
-    protected void enterValue(WebElement ele, String val, int waitTime) {
+    protected void clearAndEnterValue(WebElement ele, String val, int waitTime) {
         if (isElementAvailable(ele, waitTime)) {
+            ele.clear();
             ele.sendKeys(val);
         } else {
             Assert.fail(ele + "is not available");
@@ -93,20 +96,132 @@ public class SeleniumUtility {
         return wait;
     }
 
-    protected void openUrl(String url) {
+    public void waitUnnTillPageLoad(int timeoutVal){
+        try {
+            fluentWait(timeoutVal).until(webDriver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").toString().equals("complete"));
+        }catch (TimeoutException e){
+            throw new TimeoutException("Unable to load page in "+timeoutVal+" seconds");
+        }
+    }
+
+    protected void openUrl(String url,int timeoutVal) {
         driver.get(url);
+        waitUnnTillPageLoad(timeoutVal);
     }
 
 
-    protected String getText(WebElement ele, int time) {
-        if (isElementAvailable(ele, time)) {
+    protected String getText(WebElement ele, int timeoutVal) {
+        if (isElementAvailable(ele, timeoutVal)) {
             return ele.getText();
         }
         throw new RuntimeException("Element is not available");
     }
 
-    protected String getPageTitle() {
+    protected String getPageTitle(int timeOut) {
+        waitUnnTillPageLoad(timeOut);
         return driver.getTitle();
+    }
+
+    protected boolean isTitle(String title,int timeOut) {
+        try {
+            return title.trim().replace(" ", "").equals(getPageTitle(timeOut).trim().replaceAll("\\s", ""));
+        }catch (TimeoutException e){
+            if(driver.getTitle().equalsIgnoreCase(title)){
+                return true;
+            }else {
+                throw new TimeoutException("Page title not changes as "+title+" in "+timeOut+" seconds");
+            }
+        }
+    }
+
+
+    public WebElement getElementByTextFromElementList(List<WebElement> elements, String textToCompare, int timeout) throws InterruptedException {
+        if (isElementListAvailable(elements, timeout)) {
+            for (WebElement ele : elements) {
+                if (ele.getText().equals(textToCompare)) {
+                    return ele;
+                }
+            }
+        } else {
+            Assert.fail(elements + "Elements are not present on screen");
+        }
+        Assert.fail("Unable to find element which is having value as " + textToCompare);
+        return null;
+    }
+
+    public WebElement getElementByAttributeTextFromElementList(List<WebElement> elements, String attribute,String textToCompare, int timeout) throws InterruptedException {
+        if (isElementListAvailable(elements, timeout)) {
+            for (WebElement ele : elements) {
+                if (ele.getAttribute(attribute).equals(textToCompare)) {
+                    return ele;
+                }
+            }
+        } else {
+            Assert.fail(elements + "Elements are not present on screen");
+        }
+        Assert.fail("Unable to find element which is having value as " + textToCompare);
+        return null;
+    }
+
+    public List<String> getAllElementsTextFromElementList(List<WebElement> elements, int timeOut) throws InterruptedException {
+        List<String> elementData = new ArrayList<String>(elements.size());
+        if (isElementListAvailable(elements, timeOut)) {
+            for (WebElement val : elements) {
+                elementData.add(val.getText());
+            }
+            return elementData;
+        } else {
+            Assert.fail(elements + "Elements are not present on screen");
+            return null;
+        }
+    }
+
+    public List<String> getAllElementsAttributeFromElementList(List<WebElement> elements,String attribute, int timeOut) throws InterruptedException {
+        List<String> elementData = new ArrayList<String>(elements.size());
+        if (isElementListAvailable(elements, timeOut)) {
+            for (WebElement val : elements) {
+                elementData.add(val.getAttribute(attribute));
+            }
+            return elementData;
+        } else {
+            Assert.fail(elements + "Elements are not present on screen");
+            return null;
+        }
+    }
+
+    public boolean isElementListAvailable(List<WebElement> elements, int timeoutVal) throws InterruptedException {
+        boolean ret = false;
+        for (int i = 0; i < 5; i++) {
+            try {
+                fluentWait(timeoutVal).until(ExpectedConditions.visibilityOf(elements.get(0)));
+                if (elements.get(0).isDisplayed()) {
+                    ret = true;
+                    return ret;
+                }
+            } catch (IndexOutOfBoundsException e) {
+                Thread.sleep(1000);
+                continue;
+            } catch (TimeoutException e) {
+                e.printStackTrace();
+                return false;
+            }
+        }
+        return ret;
+    }
+
+    public boolean isAlertAppear(int timeoutVal){
+        try {
+            fluentWait(timeoutVal).until(ExpectedConditions.alertIsPresent());
+            return true;
+        }catch (TimeoutException e){
+            return false;
+        }
+    }
+
+    public void acceptAlert(int timeoutVal){
+        if(isAlertAppear(timeoutVal)){
+            driver.switchTo().alert().accept();
+        }
     }
 
 }
