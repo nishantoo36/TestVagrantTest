@@ -1,9 +1,9 @@
 package ActionClasses.UI;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+import static ActionClasses.Comparator.jsonObjectForUI;
 import utility.SeleniumUtility;
 
 import java.util.ArrayList;
@@ -27,6 +27,11 @@ public class WeatherPage extends SeleniumUtility {
 
     @FindBy(className = "leaflet-popup-content")
     WebElement weatherDetailsPopup;
+
+    @FindBy(xpath = "//div[@class='leaflet-popup-content']//child::span[not(@class='heading')and(string-length(text()) > 0)]")
+    WebElement cityAndStatedata;
+
+    private static String weatherDataForCity;
 
     List<String> cityData = new ArrayList<>(Arrays.asList("Condition", "Wind", "Humidity", "Temp in Degrees", "Temp in Fahrenheit"));
 
@@ -57,10 +62,10 @@ public class WeatherPage extends SeleniumUtility {
 
     public boolean isCityWeatherDataAppearsAfterClickingOnTheCity(String city, int timeout) throws InterruptedException {
         if (isElementAvailable(weatherDetailsPopup, 1)) {
-            String temp = getText(weatherDetailsPopup, 1);
+            weatherDataForCity = getText(weatherDetailsPopup, 1);
             cityData.add(0, city);
             for (String data : cityData) {
-                if (!temp.contains(data)) {
+                if (!weatherDataForCity.contains(data)) {
                     return false;
                 }
             }
@@ -70,7 +75,19 @@ public class WeatherPage extends SeleniumUtility {
         }
     }
 
-    public void clickOnTheCity(String city, int timeout) throws InterruptedException {
+    public void clickOnTheCity(String city) throws InterruptedException {
         clickOnElement(getElementByTextFromElementList(citiesOnMap, city, 0), 0);
+    }
+
+    public void storeWeatherDataForCity(String city){
+        weatherDataForCity = weatherDataForCity.replaceAll(getText(cityAndStatedata,0)+"\n","");
+        String [] weatherData= weatherDataForCity.split("\n");
+        int val = weatherData.length;
+        int temp = 0;
+        while (temp<val){
+            String []tempSplit = weatherData[temp].split(":");
+            jsonObjectForUI.addProperty(tempSplit[0],tempSplit[1]);
+            temp++;
+        }
     }
 }

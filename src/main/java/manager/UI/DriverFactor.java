@@ -1,5 +1,6 @@
 package manager.UI;
 
+import cucumber.api.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import manager.FileReaderManager;
 import org.openqa.selenium.WebDriver;
@@ -12,17 +13,20 @@ import java.util.Collections;
 
 public class DriverFactor {
 
-    public static String scenarioName;
     private WebDriver driver;
     private String browser;
+    private boolean isWebDriverRequired;
 
     public DriverFactor() {
         browser = FileReaderManager.getInstance().getConfigReader().getBrowserName();
+        isWebDriverRequired= FileReaderManager.getInstance().getConfigReader().getDriverRequirement();
     }
 
     public WebDriver getDriver() {
-        if (driver == null)
-            driver = startDriver();
+        if(isWebDriverRequired) {
+            if (driver == null)
+                driver = startDriver();
+        }
         return driver;
     }
 

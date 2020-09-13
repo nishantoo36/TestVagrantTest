@@ -218,8 +218,8 @@ public class SeleniumUtility {
         }
     }
 
-    public void acceptAlert(int timeoutVal){
-        if(isAlertAppear(timeoutVal)){
+    public void acceptAlert(int timeoutVal) {
+        if (isAlertAppear(timeoutVal)) {
             driver.switchTo().alert().accept();
         }
     }

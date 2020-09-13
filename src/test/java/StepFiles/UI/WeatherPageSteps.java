@@ -2,6 +2,7 @@ package StepFiles.UI;
 
 import ActionClasses.UI.WeatherPage;
 import StepFiles.Logging;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import cucumberHelper.TestContext;
@@ -20,7 +21,7 @@ public class WeatherPageSteps extends Logging {
     @Then("^user should see the weather page title \"([^\"]*)\"$")
     public void userShouldSeeTheWeatherPageTitle(String pageTitle) {
         log("Verify that user is on " + pageTitle + " page");
-        Assert.assertTrue(weatherPage.isUserOnWeatherPage(pageTitle,30), "Verification failed, user is not on the " + pageTitle);
+        Assert.assertTrue(weatherPage.isUserOnWeatherPage(pageTitle,120), "Verification failed, user is not on the " + pageTitle);
         log("Verification pass successfully , user is on " + pageTitle + " page");
 
     }
@@ -56,7 +57,7 @@ public class WeatherPageSteps extends Logging {
     @When("^user click on the \"([^\"]*)\" city in map$")
     public void userClickOnTheCityInMap(String city) throws InterruptedException {
         log("Select "+city+" city from map");
-        weatherPage.clickOnTheCity(city,1);
+        weatherPage.clickOnTheCity(city);
         log("Selected "+city+" city from map");
     }
 
@@ -65,5 +66,13 @@ public class WeatherPageSteps extends Logging {
         log("Verify that in map ,popup for weather detail of "+city+ " city is appearing or not");
         Assert.assertTrue(weatherPage.isCityWeatherDataAppearsAfterClickingOnTheCity(city,20),"Verification failed , in map , popup for weather detail of "+city+ " city is not appearing");
         log("Verification Pass successfully , in map , popup for weather detail of "+city+ " city is appearing");
+    }
+
+
+    @When("^user store the data for city \"([^\"]*)\" for UI$")
+    public void userStoreTheDataForCityForUI(String city) throws Throwable {
+        log("Store data for UI");
+        weatherPage.storeWeatherDataForCity(city);
+        log("Store the data for UI");
     }
 }

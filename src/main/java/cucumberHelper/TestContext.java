@@ -24,6 +24,10 @@ public class TestContext {
 		return pageObjectMangerUI;
 	}
 
+	public PageObjectMangerAPI getPageObjectMangerAPI() {
+		return pageObjectMangerAPI;
+	}
+
 	public ScenarioContext getScenarioContext() {
 		 return scenarioContext;
 		 }
