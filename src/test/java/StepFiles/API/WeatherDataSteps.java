@@ -28,5 +28,4 @@ public class WeatherDataSteps extends Logging {
         cityWeatherData.storeWeatherDataForCity();
     }
 
-
 }

@@ -44,7 +44,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Sep 13, 2020 11:50:52 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Sep 13, 2020 02:31:38 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -127,7 +127,7 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -141,7 +141,7 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>24</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>40</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -165,7 +165,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>ValidationForCityWeather</span>
-						<span class='test-time'>Sep 13, 2020 11:50:52 AM</span>
+						<span class='test-time'>Sep 13, 2020 02:31:38 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -173,7 +173,7 @@
 	<div class='category-list'>
 		<span class='category label'>@UIOnly</span>
 	</div>
-	<span class='duration right label'>0h 1m 6s+47ms</span>
+	<span class='duration right label'>0h 0m 37s+678ms</span>
 	<div class='desc'>
 		<h6 class="desc-text">Scenario: Test Validation for City Weather flow</h6>
 	</div>
@@ -244,9 +244,9 @@
 	<div class='category-list'>
 		<span class='category label'>@APIAndUI</span>
 	</div>
-	<span class='duration right label'>0h 1m 0s+275ms</span>
+	<span class='duration right label'>0h 0m 39s+259ms</span>
 	<div class='desc'>
-		<h6 class="desc-text">Scenario: Validate the City Current temperature date from API and UI</h6>
+		<h6 class="desc-text">Scenario: Validate the City Current temperature data from API and UI</h6>
 	</div>
 	<ul class='steps'>
 		<li test-id='14' class='node when pass' status='pass'>
@@ -320,14 +320,118 @@
 				<table class='runtime-table table-striped table'><tr><td>q</td><td>Ahmedabad</td></tr><tr><td>appid</td><td>7fe67bf08c80ded756e598d6f8fedaea</td></tr><tr><td>units</td><td>metric</td></tr></table>
 				passed
 		</li>
-		<li test-id='26' class='node when pass' status='pass'>
-			<h6 class="bdd-step-name">When user store the data for the city "Ahmedabad" from api</h6>
+		<li test-id='26' class='node then pass' status='pass'>
+			<h6 class="bdd-step-name">Then validate the status code should be "200"</h6>
 				passed
 		</li>
-		<li test-id='27' class='node then pass' status='pass'>
+		<li test-id='27' class='node when pass' status='pass'>
+			<h6 class="bdd-step-name">When user store the data for the city "Ahmedabad" from api</h6>
+				-----------
+-------------{visibility=6000, timezone=19800, main={temp=33, temp_min=33, humidity=75, pressure=1005, feels_like=39.93, temp_max=33}, clouds={all=40}, sys={country=IN, sunrise=1599958538, sunset=1600002928, id=9049, type=1}, dt=1599987157, coord={lon=72.62, lat=23.03}, weather=[{icon=03d, description=scattered clouds, main=Clouds, id=802}], name=Ahmedabad, cod=200, id=1279233, base=stations, wind={deg=110, speed=2.1}}
+				passed
+		</li>
+		<li test-id='28' class='node then pass' status='pass'>
 			<h6 class="bdd-step-name">Then compare the temperature data for UI and API in "C" and validate that both should be nealy same</h6>
-				Compare the data ------------- >
-				Verification pass successfully ------------- >
+				Compare the city temperature data ------------- >
+				Verification pass successfully, the variance for city temperature data from Api and UI is less than expected +0.0 ------------- >
+				passed
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='29' status='pass'>
+	<div class='category-list'>
+		<span class='category label'>@APIAndUI</span>
+	</div>
+	<span class='duration right label'>0h 0m 38s+9ms</span>
+	<div class='desc'>
+		<h6 class="desc-text">Scenario: Validate the City Humidity data from API and UI</h6>
+	</div>
+	<ul class='steps'>
+		<li test-id='30' class='node when pass' status='pass'>
+			<h6 class="bdd-step-name">When open Homepage</h6>
+				No alert appear so perform next step ------------- >
+				User is on Login page ------------- >
+				passed
+		</li>
+		<li test-id='31' class='node then pass' status='pass'>
+			<h6 class="bdd-step-name">Then user should see the home page title "NDTV: Latest News, India News, Breaking News, Business, Bollywood, Cricket, Videos & Photos"</h6>
+				Verify that user is on NDTV: Latest News, India News, Breaking News, Business, Bollywood, Cricket, Videos & Photos page ------------- >
+				Verification pass successfully , user is on NDTV: Latest News, India News, Breaking News, Business, Bollywood, Cricket, Videos & Photos page ------------- >
+				passed
+		</li>
+		<li test-id='32' class='node when pass' status='pass'>
+			<h6 class="bdd-step-name">When user click on "Weather" option from header menu</h6>
+				Click on Weather from headers menu ------------- >
+				Clicked on Weather menu option ------------- >
+				passed
+		</li>
+		<li test-id='33' class='node then pass' status='pass'>
+			<h6 class="bdd-step-name">Then user should see the weather page title "NDTV Weather - Weather in your Indian City"</h6>
+				Verify that user is on NDTV Weather - Weather in your Indian City page ------------- >
+				Verification pass successfully , user is on NDTV Weather - Weather in your Indian City page ------------- >
+				passed
+		</li>
+		<li test-id='34' class='node when pass' status='pass'>
+			<h6 class="bdd-step-name">When user search for "Ahmedabad" in Pin your city search</h6>
+				Search the city Ahmedabad in PIN your city search ------------- >
+				Searched city as Ahmedabad in PIN your city searched ------------- >
+				passed
+		</li>
+		<li test-id='35' class='node then pass' status='pass'>
+			<h6 class="bdd-step-name">Then user should see the "Ahmedabad" Pin your city search result</h6>
+				Verify that in search result Ahmedabad is appearing or not ------------- >
+				Verification pass successfully , Ahmedabad city is appearing in Pin your city search result ------------- >
+				passed
+		</li>
+		<li test-id='36' class='node when pass' status='pass'>
+			<h6 class="bdd-step-name">When user select "Ahmedabad" from Pin your city search result</h6>
+				Select Ahmedabad city from Pin your city search result  ------------- >
+				Selected Ahmedabad city from search result ------------- >
+				passed
+		</li>
+		<li test-id='37' class='node then pass' status='pass'>
+			<h6 class="bdd-step-name">Then user should see the "Ahmedabad" city in map</h6>
+				Verify that in map Ahmedabad city is appearing or not ------------- >
+				Verification pass successfully , Ahmedabad city is appearing in the map ------------- >
+				passed
+		</li>
+		<li test-id='38' class='node when pass' status='pass'>
+			<h6 class="bdd-step-name">When user click on the "Ahmedabad" city in map</h6>
+				Select Ahmedabad city from map ------------- >
+				Selected Ahmedabad city from map ------------- >
+				passed
+		</li>
+		<li test-id='39' class='node then pass' status='pass'>
+			<h6 class="bdd-step-name">Then user should see the popup of "Ahmedabad" detail in the map</h6>
+				Verify that in map ,popup for weather detail of Ahmedabad city is appearing or not ------------- >
+				Verification Pass successfully , in map , popup for weather detail of Ahmedabad city is appearing ------------- >
+				passed
+		</li>
+		<li test-id='40' class='node when pass' status='pass'>
+			<h6 class="bdd-step-name">When user store the data for city "Ahmedabad" for UI</h6>
+				Store data for UI ------------- >
+				Store the data for UI ------------- >
+				passed
+		</li>
+		<li test-id='41' class='node when pass' status='pass'>
+			<h6 class="bdd-step-name">When user get the data for endpoint "data/2.5/weather" with pathParam</h6>
+				<table class='runtime-table table-striped table'><tr><td>q</td><td>Ahmedabad</td></tr><tr><td>appid</td><td>7fe67bf08c80ded756e598d6f8fedaea</td></tr></table>
+				passed
+		</li>
+		<li test-id='42' class='node then pass' status='pass'>
+			<h6 class="bdd-step-name">Then validate the status code should be "200"</h6>
+				passed
+		</li>
+		<li test-id='43' class='node when pass' status='pass'>
+			<h6 class="bdd-step-name">When user store the data for the city "Ahmedabad" from api</h6>
+				-----------
+-------------{visibility=6000, timezone=19800, main={temp=306.15, temp_min=306.15, humidity=75, pressure=1005, feels_like=313.08, temp_max=306.15}, clouds={all=40}, sys={country=IN, sunrise=1599958538, sunset=1600002928, id=9049, type=1}, dt=1599987519, coord={lon=72.62, lat=23.03}, weather=[{icon=03d, description=scattered clouds, main=Clouds, id=802}], name=Ahmedabad, cod=200, id=1279233, base=stations, wind={deg=110, speed=2.1}}
+				passed
+		</li>
+		<li test-id='44' class='node then pass' status='pass'>
+			<h6 class="bdd-step-name">Then compare the humidity data for UI and API and validate that both should be nealy same</h6>
+				Compare the humidity temperature data ------------- >
+				Verification pass successfully,the variance for city humidity data is less than expected for API and UI which is 9.0 ------------- >
 				passed
 		</li>
 	</ul>
@@ -397,7 +501,7 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Sep 13, 2020 11:50:52 AM</td>
+										<td>Sep 13, 2020 02:31:38 PM</td>
 										<td class='linked' test-id='2'>ValidationForCityWeather.Test Validation for City Weather flow</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
@@ -410,12 +514,12 @@
 					<div class='category-heading'>
 						<span class='category-name'>@APIAndUI</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label pass'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
 							
 							
 						</div>
@@ -430,8 +534,13 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Sep 13, 2020 11:51:58 AM</td>
-										<td class='linked' test-id='13'>ValidationForCityWeather.Validate the City Current temperature date from API and UI</td>
+										<td>Sep 13, 2020 02:32:16 PM</td>
+										<td class='linked' test-id='13'>ValidationForCityWeather.Validate the City Current temperature data from API and UI</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Sep 13, 2020 02:32:56 PM</td>
+										<td class='linked' test-id='29'>ValidationForCityWeather.Validate the City Humidity data from API and UI</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -462,25 +571,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>24</div>
+					<div class='panel-lead'>40</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Sep 13, 2020 11:50:52 AM</div>
+					<div class='panel-lead'>Sep 13, 2020 02:31:38 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Sep 13, 2020 11:50:52 AM</div>
+			 		<div class='panel-lead'>Sep 13, 2020 02:31:38 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -512,7 +621,7 @@
 						</tr>
 						<tr>
 							<td>@APIAndUI</td>
-							<td>1</td>
+							<td>2</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
@@ -538,7 +647,7 @@
 				skipParent: 0,
 				exceptionsParent: 0,
 				
-				passChild: 2,
+				passChild: 3,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
@@ -548,7 +657,7 @@
 				debugChild: 0,
 				exceptionsChild: 0,
 				
-				passGrandChild: 24,
+				passGrandChild: 40,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -561,7 +670,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "ValidationForCityWeather":126.598
+			        "ValidationForCityWeather":115.281
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/e9ccc29bd18c7914697075f44948d0913e462478/v3html/js/extent.js' type='text/javascript'></script>

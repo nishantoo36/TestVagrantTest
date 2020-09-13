@@ -124,18 +124,22 @@ public class SeleniumUtility {
 
     protected boolean isTitle(String title,int timeOut) {
         try {
-            return title.trim().replace(" ", "").equals(getPageTitle(timeOut).trim().replaceAll("\\s", ""));
+            return removeAllSpaces(title).equalsIgnoreCase(removeAllSpaces(getPageTitle(timeOut)));
         }catch (TimeoutException e){
-            if(driver.getTitle().equalsIgnoreCase(title)){
+            if(removeAllSpaces(driver.getTitle()).equalsIgnoreCase(removeAllSpaces(title))){
                 return true;
             }else {
-                throw new TimeoutException("Page title not changes as "+title+" in "+timeOut+" seconds");
+                Assert.fail("Page title not changes as "+title+" in "+timeOut+" seconds");
+                return false;
             }
         }
     }
 
+    protected String removeAllSpaces(String str){
+        return str.trim().replace(" ", "").replaceAll("\\s", "");
+    }
 
-    public WebElement getElementByTextFromElementList(List<WebElement> elements, String textToCompare, int timeout) throws InterruptedException {
+    protected WebElement getElementByTextFromElementList(List<WebElement> elements, String textToCompare, int timeout) throws InterruptedException {
         if (isElementListAvailable(elements, timeout)) {
             for (WebElement ele : elements) {
                 if (ele.getText().equals(textToCompare)) {

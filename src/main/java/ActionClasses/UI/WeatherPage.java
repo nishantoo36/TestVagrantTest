@@ -35,7 +35,8 @@ public class WeatherPage extends SeleniumUtility {
 
     List<String> cityData = new ArrayList<>(Arrays.asList("Condition", "Wind", "Humidity", "Temp in Degrees", "Temp in Fahrenheit"));
 
-    public boolean isUserOnWeatherPage(String pageTitle, int timeout) {
+    public boolean isUserOnWeatherPage(String pageTitle, int timeout) throws InterruptedException {
+        Thread.sleep(1000);
         return isTitle(pageTitle, timeout);
     }
 
@@ -53,7 +54,7 @@ public class WeatherPage extends SeleniumUtility {
     }
 
     public void enterCityInSearch(String city) {
-        clearAndEnterValue(searchBox, city, 1);
+        clearAndEnterValue(searchBox, city, 10);
     }
 
     public boolean isCityAppearsOnMap(String city, int timeout) throws InterruptedException {

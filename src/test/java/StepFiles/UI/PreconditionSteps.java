@@ -20,7 +20,7 @@ public class PreconditionSteps extends Logging {
     public void userShouldBeOnLoginPage() {
         try {
             commonUIActions.openMainURL(10);
-            commonUIActions.acceptAlert(5);
+            commonUIActions.acceptAlert(2);
         }catch (Exception e){
             if(!commonUIActions.isAlertAppear(2)){
                 log("No alert appear so perform next step");

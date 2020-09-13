@@ -1,9 +1,11 @@
 package utility;
 
+import com.google.gson.JsonObject;
 import io.restassured.config.HeaderConfig;
 import io.restassured.config.RestAssuredConfig;
 import io.restassured.response.Response;
 import io.restassured.specification.FilterableRequestSpecification;
+import io.restassured.specification.RequestSpecification;
 import manager.FileReaderManager;
 import java.util.Iterator;
 import java.util.List;
@@ -13,15 +15,16 @@ import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
 
 public class RestUtility{
-    public static FilterableRequestSpecification httpRequest = null;
-    public Map<String,String> val;
+    public static Response response;
+    private static FilterableRequestSpecification httpRequest = null;
+    public Map<String,String> setHeaders;
 
-    public RestUtility() {
+    protected RestUtility() {
         baseURI = FileReaderManager.getInstance().getConfigReader().getBaseURL();
         httpRequest = (FilterableRequestSpecification) given();
     }
 
-    public void setHeader(Map<String, String> headers) {
+    protected void setHeader(Map<String, String> headers) {
         if(headers!=null) {
             Iterator<Map.Entry<String, String>> itr = headers.entrySet().iterator();
             while (itr.hasNext()) {
@@ -33,20 +36,42 @@ public class RestUtility{
 
     }
 
-    public Response getData(String endpoint,Map<String, String> headers,Map<String, String> pathParams) {
+    protected Response getData(String endpoint,Map<String, String> headers,Map<String, String> params,String paramType) {
         setHeader(headers);
-        return httpRequest.queryParams(pathParams).get(endpoint);
+        if(paramType.equalsIgnoreCase("pathParam")){
+            return httpRequest.pathParams(params).get(endpoint);
+        }else if (paramType.equalsIgnoreCase("queryParam")) {
+            return httpRequest.queryParams(params).get(endpoint);
+        }else {
+            throw new UnsupportedOperationException("ParamType is not supported");
+        }
     }
 
-    public int getStatusCode(Response response){
+    protected Response postData(String endpoint, Map<String, String> headers, Map<String, String> params, String paramType, JsonObject properties) {
+        setHeader(headers);
+        if (!properties.toString().equals("{}")) {
+            httpRequest.body(properties.toString());
+        } else {
+            httpRequest.body("");
+        }
+        if(paramType.equalsIgnoreCase("pathParam")){
+            return httpRequest.pathParams(params).post(endpoint);
+        }else if (paramType.equalsIgnoreCase("queryParam")) {
+            return httpRequest.queryParams(params).post(endpoint);
+        }else {
+            throw new UnsupportedOperationException("ParamType is not supported");
+        }
+    }
+
+    protected int getStatusCode(){
         return response.statusCode();
     }
 
-    public String getFieldValue(Response response,String path){
+    protected String getFieldValue(String path){
         return response.jsonPath().get(path);
     }
 
-    public List getFieldValues(Response response, String path){
+    protected List getFieldValues(String path){
         return response.jsonPath().getList(path);
 
     }

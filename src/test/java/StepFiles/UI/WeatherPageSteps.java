@@ -19,9 +19,9 @@ public class WeatherPageSteps extends Logging {
     }
 
     @Then("^user should see the weather page title \"([^\"]*)\"$")
-    public void userShouldSeeTheWeatherPageTitle(String pageTitle) {
+    public void userShouldSeeTheWeatherPageTitle(String pageTitle) throws InterruptedException {
         log("Verify that user is on " + pageTitle + " page");
-        Assert.assertTrue(weatherPage.isUserOnWeatherPage(pageTitle,120), "Verification failed, user is not on the " + pageTitle);
+        Assert.assertTrue(weatherPage.isUserOnWeatherPage(pageTitle,10), "Verification failed, user is not on the " + pageTitle);
         log("Verification pass successfully , user is on " + pageTitle + " page");
 
     }
