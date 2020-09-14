@@ -4,7 +4,9 @@
 2. To run this Maven and Java should be already set in the system 
 3. To use this step 1 is do git clone in any folder then with "mvn test" you can run all the scenario 
 4. Set isWebDriver false in "Config/Common.properties"  if you want to run the scenario which not include UI part 
-5. To run Scenario tag wise the do mvn test -Dcucumber.options="–t @APIAndUI"
+5. To run Scenario tag wise :  mvn test -Dcucumber.options="–t @APIAndUI"
+6. Reports are available in ..UI/target/cucumber-report
+7. Test Scenarios are available in ..UI/Features/UI Test
 
 Note: 
 
