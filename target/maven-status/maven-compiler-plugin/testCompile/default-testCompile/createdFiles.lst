@@ -1,5 +1,3 @@
 StepFiles/Logging.class
 runner/TestRunner.class
 StepFiles/Hooks.class
-StepFiles/LoginPageSteps.class
-StepFiles/PreconditionSteps.class

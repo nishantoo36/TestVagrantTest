@@ -32,7 +32,7 @@ Feature: ValidationForCityWeather
       | units | metric                           |
     Then validate the status code should be "200"
     When user store the data for the city "Ahmedabad" from api
-    Then compare the temperature data for UI and API in "C" and validate that both should be nealy same
+    Then compare the temperature data for UI and API in "C" and validate that both should be nealy same with variance less than "5"
 
 
   @APIAndUI
@@ -53,7 +53,7 @@ Feature: ValidationForCityWeather
       | appid | 7fe67bf08c80ded756e598d6f8fedaea |
     Then validate the status code should be "200"
     When user store the data for the city "Ahmedabad" from api
-    Then compare the humidity data for UI and API and validate that both should be nealy same
+    Then compare the humidity data for UI and API and validate that both should be nealy same with variance less than "5"
 
 
 

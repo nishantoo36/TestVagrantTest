@@ -1,37 +1,103 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="5.230743">
-<testcase classname="ValidationTestForLogin" name="Test Validation for invalid UserName with correct format" time="5.230743">
-<failure message="org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status&#10;from disconnected: received Inspector.detached event&#10;  (Session info: chrome=85.0.4183.83)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'AHMnpatel2PJG5J', ip: '192.168.43.209', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '1.8.0_202'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.83, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/11/wrcgffs115x...}, goog:chromeOptions: {debuggerAddress: localhost:57293}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 9b09479384efd7c4e2b553b8d56905ae&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)&#10;&#9;at utility.SeleniumUtility.openUrl(SeleniumUtility.java:97)&#10;&#9;at ActionClasses.CommonUIActions.openMainURL(CommonUIActions.java:18)&#10;&#9;at StepFiles.PreconditionSteps.userShouldBeOnLoginPage(PreconditionSteps.java:18)&#10;&#9;at ✽.Given User should be on Login Page(UITest/ValidationTestForLogin.feature:4)&#10;"><![CDATA[Given User should be on Login Page..........................................failed
-Then user should see the "Log in | Typeform"................................skipped
-When user enter username as "test@test.com".................................skipped
-When user enter password as "Test@1234".....................................skipped
-When user click on login button.............................................skipped
-Then user get error message as "Your login info isn't right. Try again, or reset your password if it slipped your mind. ".skipped
+<testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="41.840447">
+    <testcase classname="ValidationForCityWeather" name="Validate the City Current temperature data from API and UI" time="34.704003">
+        <failure message="org.openqa.selenium.NoSuchWindowException: no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=85.0.4183.102)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'AHMnpatel2PJG5J', ip: '192.168.43.209', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '14.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/11/wrcgffs115x...}, goog:chromeOptions: {debuggerAddress: localhost:54206}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: ec75f939e3a43fbdcda9a11c47886009&#10;*** Element info: {Using=xpath, value=//div[@class='topnav_cont']/child::a}&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:353)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:432)&#10;&#9;at org.openqa.selenium.By$ByXPath.findElements(By.java:348)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:311)&#10;&#9;at org.openqa.selenium.support.pagefactory.ByAll.findElements(ByAll.java:65)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:311)&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:85)&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)&#10;&#9;at com.sun.proxy.$Proxy23.get(Unknown Source)&#10;&#9;at utility.SeleniumUtility.isElementListAvailable(SeleniumUtility.java:200)&#10;&#9;at utility.SeleniumUtility.getElementByTextFromElementList(SeleniumUtility.java:143)&#10;&#9;at ActionClasses.UI.HomePage.clickOnMenu(HomePage.java:38)&#10;&#9;at StepFiles.UI.HomePageSteps.userClickOnOptionFromHeaderMenu(HomePageSteps.java:30)&#10;&#9;at ✽.When user click on &quot;Weather&quot; option from header menu(UITest/ValidationForCityWeather.feature:20)&#10;"><![CDATA[When open Homepage..........................................................passed
+Then user should see the home page title "NDTV: Latest News, India News, Breaking News, Business, Bollywood, Cricket, Videos & Photos".passed
+When user click on "Weather" option from header menu........................failed
+Then user should see the weather page title "NDTV Weather - Weather in your Indian City".skipped
+When user search for "Ahmedabad" in Pin your city search....................skipped
+Then user should see the "Ahmedabad" Pin your city search result............skipped
+When user select "Ahmedabad" from Pin your city search result...............skipped
+Then user should see the "Ahmedabad" city in map............................skipped
+When user click on the "Ahmedabad" city in map..............................skipped
+Then user should see the popup of "Ahmedabad" detail in the map.............skipped
+When user store the data for city "Ahmedabad" for UI........................skipped
+When user get the data for endpoint "data/2.5/weather" with pathParam.......skipped
+Then validate the status code should be "200"...............................skipped
+When user store the data for the city "Ahmedabad" from api..................skipped
+Then compare the temperature data for UI and API in "C" and validate that both should be nealy same.skipped
 
 StackTrace:
-org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
-from disconnected: received Inspector.detached event
-  (Session info: chrome=85.0.4183.83)
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=85.0.4183.102)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'AHMnpatel2PJG5J', ip: '192.168.43.209', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '1.8.0_202'
+System info: host: 'AHMnpatel2PJG5J', ip: '192.168.43.209', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '14.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.83, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/11/wrcgffs115x...}, goog:chromeOptions: {debuggerAddress: localhost:57293}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 9b09479384efd7c4e2b553b8d56905ae
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/11/wrcgffs115x...}, goog:chromeOptions: {debuggerAddress: localhost:54206}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: ec75f939e3a43fbdcda9a11c47886009
+*** Element info: {Using=xpath, value=//div[@class='topnav_cont']/child::a}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at utility.SeleniumUtility.openUrl(SeleniumUtility.java:97)
-	at ActionClasses.CommonUIActions.openMainURL(CommonUIActions.java:18)
-	at StepFiles.PreconditionSteps.userShouldBeOnLoginPage(PreconditionSteps.java:18)
-	at ✽.Given User should be on Login Page(UITest/ValidationTestForLogin.feature:4)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:432)
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:311)
+	at org.openqa.selenium.support.pagefactory.ByAll.findElements(ByAll.java:65)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:311)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:85)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)
+	at com.sun.proxy.$Proxy23.get(Unknown Source)
+	at utility.SeleniumUtility.isElementListAvailable(SeleniumUtility.java:200)
+	at utility.SeleniumUtility.getElementByTextFromElementList(SeleniumUtility.java:143)
+	at ActionClasses.UI.HomePage.clickOnMenu(HomePage.java:38)
+	at StepFiles.UI.HomePageSteps.userClickOnOptionFromHeaderMenu(HomePageSteps.java:30)
+	at ✽.When user click on "Weather" option from header menu(UITest/ValidationForCityWeather.feature:20)
 ]]></failure>
-</testcase>
+    </testcase>
+    <testcase classname="ValidationForCityWeather" name="Validate the City Humidity data from API and UI" time="7.136444">
+        <failure message="org.openqa.selenium.NoSuchWindowException: no such window: window was already closed&#10;  (Session info: chrome=85.0.4183.102)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'AHMnpatel2PJG5J', ip: '192.168.43.209', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '14.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/11/wrcgffs115x...}, goog:chromeOptions: {debuggerAddress: localhost:54552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 52fc2ada9d72a9e056771957f2dba8c2&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:932)&#10;&#9;at org.openqa.selenium.support.ui.ExpectedConditions$28.apply(ExpectedConditions.java:806)&#10;&#9;at org.openqa.selenium.support.ui.ExpectedConditions$28.apply(ExpectedConditions.java:802)&#10;&#9;at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)&#10;&#9;at utility.SeleniumUtility.isAlertAppear(SeleniumUtility.java:218)&#10;&#9;at StepFiles.UI.PreconditionSteps.userShouldBeOnLoginPage(PreconditionSteps.java:25)&#10;&#9;at ✽.When open Homepage(UITest/ValidationForCityWeather.feature:40)&#10;"><![CDATA[When open Homepage..........................................................failed
+Then user should see the home page title "NDTV: Latest News, India News, Breaking News, Business, Bollywood, Cricket, Videos & Photos".skipped
+When user click on "Weather" option from header menu........................skipped
+Then user should see the weather page title "NDTV Weather - Weather in your Indian City".skipped
+When user search for "Ahmedabad" in Pin your city search....................skipped
+Then user should see the "Ahmedabad" Pin your city search result............skipped
+When user select "Ahmedabad" from Pin your city search result...............skipped
+Then user should see the "Ahmedabad" city in map............................skipped
+When user click on the "Ahmedabad" city in map..............................skipped
+Then user should see the popup of "Ahmedabad" detail in the map.............skipped
+When user store the data for city "Ahmedabad" for UI........................skipped
+When user get the data for endpoint "data/2.5/weather" with pathParam.......skipped
+Then validate the status code should be "200"...............................skipped
+When user store the data for the city "Ahmedabad" from api..................skipped
+Then compare the humidity data for UI and API and validate that both should be nealy same.skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchWindowException: no such window: window was already closed
+  (Session info: chrome=85.0.4183.102)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AHMnpatel2PJG5J', ip: '192.168.43.209', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/11/wrcgffs115x...}, goog:chromeOptions: {debuggerAddress: localhost:54552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 52fc2ada9d72a9e056771957f2dba8c2
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:932)
+	at org.openqa.selenium.support.ui.ExpectedConditions$28.apply(ExpectedConditions.java:806)
+	at org.openqa.selenium.support.ui.ExpectedConditions$28.apply(ExpectedConditions.java:802)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at utility.SeleniumUtility.isAlertAppear(SeleniumUtility.java:218)
+	at StepFiles.UI.PreconditionSteps.userShouldBeOnLoginPage(PreconditionSteps.java:25)
+	at ✽.When open Homepage(UITest/ValidationForCityWeather.feature:40)
+]]></failure>
+    </testcase>
 </testsuite>

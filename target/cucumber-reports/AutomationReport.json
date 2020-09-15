@@ -3,32 +3,10 @@
     "line": 1,
     "elements": [
       {
-        "line": 3,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 1049338520,
-              "error_message": "org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status\nfrom disconnected: received Inspector.detached event\n  (Session info: chrome\u003d85.0.4183.83)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027AHMnpatel2PJG5J\u0027, ip: \u0027192.168.43.209\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.6\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.83, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/11/wrcgffs115x...}, goog:chromeOptions: {debuggerAddress: localhost:57293}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 9b09479384efd7c4e2b553b8d56905ae\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)\n\tat utility.SeleniumUtility.openUrl(SeleniumUtility.java:97)\n\tat ActionClasses.CommonUIActions.openMainURL(CommonUIActions.java:18)\n\tat StepFiles.PreconditionSteps.userShouldBeOnLoginPage(PreconditionSteps.java:18)\n\tat ✽.Given User should be on Login Page(UITest/ValidationTestForLogin.feature:4)\n",
-              "status": "failed"
-            },
-            "line": 4,
-            "name": "User should be on Login Page",
-            "match": {
-              "location": "PreconditionSteps.userShouldBeOnLoginPage()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
         "before": [
           {
             "result": {
-              "duration": 4083384678,
+              "duration": 7516579615,
               "status": "passed"
             },
             "match": {
@@ -37,7 +15,7 @@
           },
           {
             "result": {
-              "duration": 679935,
+              "duration": 497009,
               "status": "passed"
             },
             "match": {
@@ -45,15 +23,15 @@
             }
           }
         ],
-        "line": 6,
-        "name": "Test Validation for invalid UserName with correct format",
+        "line": 17,
+        "name": "Validate the City Current temperature data from API and UI",
         "description": "",
-        "id": "validationtestforlogin;test-validation-for-invalid-username-with-correct-format",
+        "id": "validationforcityweather;validate-the-city-current-temperature-data-from-api-and-ui",
         "after": [
           {
             "result": {
-              "duration": 6289060,
-              "error_message": "org.openqa.selenium.WebDriverException: chrome not reachable\n  (Session info: chrome\u003d85.0.4183.83)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027AHMnpatel2PJG5J\u0027, ip: \u0027192.168.43.209\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.6\u0027, java.version: \u00271.8.0_202\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.83, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/11/wrcgffs115x...}, goog:chromeOptions: {debuggerAddress: localhost:57293}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 9b09479384efd7c4e2b553b8d56905ae\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\n\tat org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)\n\tat utility.SeleniumUtility.takeScreenShot(SeleniumUtility.java:27)\n\tat StepFiles.Hooks.afterScenario(Hooks.java:49)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\n\tat cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)\n\tat cucumber.runtime.Runtime.runHooks(Runtime.java:212)\n\tat cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:115)\n\tat org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:74)\n\tat org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:65)\n\tat org.testng.TestRunner$1.run(TestRunner.java:652)\n\tat java.util.ArrayList.forEach(ArrayList.java:1257)\n\tat org.testng.TestRunner.runJUnitWorkers(TestRunner.java:843)\n\tat org.testng.TestRunner.privateRunJUnit(TestRunner.java:681)\n\tat org.testng.TestRunner.run(TestRunner.java:585)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:384)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:286)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1109)\n\tat org.testng.TestNG.runSuites(TestNG.java:1039)\n\tat org.testng.TestNG.run(TestNG.java:1007)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)\n\tat org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)\n",
+              "duration": 1082816,
+              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d85.0.4183.102)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027AHMnpatel2PJG5J\u0027, ip: \u0027192.168.43.209\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.6\u0027, java.version: \u002714.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/11/wrcgffs115x...}, goog:chromeOptions: {debuggerAddress: localhost:54206}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: ec75f939e3a43fbdcda9a11c47886009\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\n\tat org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)\n\tat utility.SeleniumUtility.takeScreenShot(SeleniumUtility.java:29)\n\tat StepFiles.Hooks.afterScenario(Hooks.java:49)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\n\tat cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)\n\tat cucumber.runtime.Runtime.runHooks(Runtime.java:212)\n\tat cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:115)\n\tat org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:74)\n\tat org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:65)\n\tat org.testng.TestRunner$1.run(TestRunner.java:652)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n\tat org.testng.TestRunner.runJUnitWorkers(TestRunner.java:843)\n\tat org.testng.TestRunner.privateRunJUnit(TestRunner.java:681)\n\tat org.testng.TestRunner.run(TestRunner.java:585)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:384)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:286)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1109)\n\tat org.testng.TestNG.runSuites(TestNG.java:1039)\n\tat org.testng.TestNG.run(TestNG.java:1007)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)\n\tat org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)\n",
               "status": "failed"
             },
             "match": {
@@ -62,7 +40,351 @@
           },
           {
             "result": {
-              "duration": 91051259,
+              "duration": 165935035,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "output": [
+              "No alert appear so perform next step\n",
+              "User is on Login page\n"
+            ],
+            "result": {
+              "duration": 15309639855,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "open Homepage",
+            "match": {
+              "location": "PreconditionSteps.userShouldBeOnLoginPage()"
+            },
+            "keyword": "When "
+          },
+          {
+            "output": [
+              "Verify that user is on NDTV: Latest News, India News, Breaking News, Business, Bollywood, Cricket, Videos \u0026 Photos page\n",
+              "Verification pass successfully , user is on NDTV: Latest News, India News, Breaking News, Business, Bollywood, Cricket, Videos \u0026 Photos page\n"
+            ],
+            "result": {
+              "duration": 10016807152,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user should see the home page title \"NDTV: Latest News, India News, Breaking News, Business, Bollywood, Cricket, Videos \u0026 Photos\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "NDTV: Latest News, India News, Breaking News, Business, Bollywood, Cricket, Videos \u0026 Photos",
+                  "offset": 37
+                }
+              ],
+              "location": "HomePageSteps.userShouldSeeThe(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "output": [
+              "Click on Weather from headers menu\n"
+            ],
+            "result": {
+              "duration": 1693461441,
+              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d85.0.4183.102)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027AHMnpatel2PJG5J\u0027, ip: \u0027192.168.43.209\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.6\u0027, java.version: \u002714.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/11/wrcgffs115x...}, goog:chromeOptions: {debuggerAddress: localhost:54206}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: ec75f939e3a43fbdcda9a11c47886009\n*** Element info: {Using\u003dxpath, value\u003d//div[@class\u003d\u0027topnav_cont\u0027]/child::a}\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:432)\n\tat org.openqa.selenium.By$ByXPath.findElements(By.java:348)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:311)\n\tat org.openqa.selenium.support.pagefactory.ByAll.findElements(ByAll.java:65)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:311)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:85)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)\n\tat com.sun.proxy.$Proxy23.get(Unknown Source)\n\tat utility.SeleniumUtility.isElementListAvailable(SeleniumUtility.java:200)\n\tat utility.SeleniumUtility.getElementByTextFromElementList(SeleniumUtility.java:143)\n\tat ActionClasses.UI.HomePage.clickOnMenu(HomePage.java:38)\n\tat StepFiles.UI.HomePageSteps.userClickOnOptionFromHeaderMenu(HomePageSteps.java:30)\n\tat ✽.When user click on \"Weather\" option from header menu(UITest/ValidationForCityWeather.feature:20)\n",
+              "status": "failed"
+            },
+            "line": 20,
+            "name": "user click on \"Weather\" option from header menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Weather",
+                  "offset": 15
+                }
+              ],
+              "location": "HomePageSteps.userClickOnOptionFromHeaderMenu(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 21,
+            "name": "user should see the weather page title \"NDTV Weather - Weather in your Indian City\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "NDTV Weather - Weather in your Indian City",
+                  "offset": 40
+                }
+              ],
+              "location": "WeatherPageSteps.userShouldSeeTheWeatherPageTitle(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 22,
+            "name": "user search for \"Ahmedabad\" in Pin your city search",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ahmedabad",
+                  "offset": 17
+                }
+              ],
+              "location": "WeatherPageSteps.userSearchForInPinYourCitySearch(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 23,
+            "name": "user should see the \"Ahmedabad\" Pin your city search result",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ahmedabad",
+                  "offset": 21
+                }
+              ],
+              "location": "WeatherPageSteps.userShouldSeeThePinYourCitySearchResult(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 24,
+            "name": "user select \"Ahmedabad\" from Pin your city search result",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ahmedabad",
+                  "offset": 13
+                }
+              ],
+              "location": "WeatherPageSteps.userSelectFromPinYourCitySearchResult(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "user should see the \"Ahmedabad\" city in map",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ahmedabad",
+                  "offset": 21
+                }
+              ],
+              "location": "WeatherPageSteps.userShouldSeeTheCityInMap(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 26,
+            "name": "user click on the \"Ahmedabad\" city in map",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ahmedabad",
+                  "offset": 19
+                }
+              ],
+              "location": "WeatherPageSteps.userClickOnTheCityInMap(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 27,
+            "name": "user should see the popup of \"Ahmedabad\" detail in the map",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ahmedabad",
+                  "offset": 30
+                }
+              ],
+              "location": "WeatherPageSteps.userShouldSeeThePopupOfDetailInTheMap(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "user store the data for city \"Ahmedabad\" for UI",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ahmedabad",
+                  "offset": 30
+                }
+              ],
+              "location": "WeatherPageSteps.userStoreTheDataForCityForUI(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 29,
+            "name": "user get the data for endpoint \"data/2.5/weather\" with pathParam",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data/2.5/weather",
+                  "offset": 32
+                }
+              ],
+              "location": "WeatherDataSteps.userGetTheDataForEndpointWithPathParam(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "q",
+                  "Ahmedabad"
+                ],
+                "line": 30
+              },
+              {
+                "cells": [
+                  "appid",
+                  "7fe67bf08c80ded756e598d6f8fedaea"
+                ],
+                "line": 31
+              },
+              {
+                "cells": [
+                  "units",
+                  "metric"
+                ],
+                "line": 32
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 33,
+            "name": "validate the status code should be \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 36
+                }
+              ],
+              "location": "CommonSteps.validateTheStatusCodeShouldBe(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 34,
+            "name": "user store the data for the city \"Ahmedabad\" from api",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ahmedabad",
+                  "offset": 34
+                }
+              ],
+              "location": "WeatherDataSteps.userStoreTheDataForTheCityFromApi(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 35,
+            "name": "compare the temperature data for UI and API in \"C\" and validate that both should be nealy same",
+            "match": {
+              "arguments": [
+                {
+                  "val": "C",
+                  "offset": 48
+                }
+              ],
+              "location": "ComparatorSteps.compareTemperature(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 16,
+            "name": "@APIAndUI"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 5876093999,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.Logging(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 55645,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario(Scenario)"
+            }
+          }
+        ],
+        "line": 39,
+        "name": "Validate the City Humidity data from API and UI",
+        "description": "",
+        "id": "validationforcityweather;validate-the-city-humidity-data-from-api-and-ui",
+        "after": [
+          {
+            "result": {
+              "duration": 4817572,
+              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: window was already closed\n  (Session info: chrome\u003d85.0.4183.102)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027AHMnpatel2PJG5J\u0027, ip: \u0027192.168.43.209\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.6\u0027, java.version: \u002714.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/11/wrcgffs115x...}, goog:chromeOptions: {debuggerAddress: localhost:54552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 52fc2ada9d72a9e056771957f2dba8c2\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\n\tat org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)\n\tat utility.SeleniumUtility.takeScreenShot(SeleniumUtility.java:29)\n\tat StepFiles.Hooks.afterScenario(Hooks.java:49)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\n\tat cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)\n\tat cucumber.runtime.Runtime.runHooks(Runtime.java:212)\n\tat cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:115)\n\tat org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:74)\n\tat org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:65)\n\tat org.testng.TestRunner$1.run(TestRunner.java:652)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n\tat org.testng.TestRunner.runJUnitWorkers(TestRunner.java:843)\n\tat org.testng.TestRunner.privateRunJUnit(TestRunner.java:681)\n\tat org.testng.TestRunner.run(TestRunner.java:585)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:384)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:286)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1109)\n\tat org.testng.TestNG.runSuites(TestNG.java:1039)\n\tat org.testng.TestNG.run(TestNG.java:1007)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)\n\tat org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)\n",
+              "status": "failed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 87251390,
               "status": "passed"
             },
             "match": {
@@ -75,18 +397,99 @@
         "steps": [
           {
             "result": {
+              "duration": 1168225400,
+              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: window was already closed\n  (Session info: chrome\u003d85.0.4183.102)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027AHMnpatel2PJG5J\u0027, ip: \u0027192.168.43.209\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.15.6\u0027, java.version: \u002714.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/11/wrcgffs115x...}, goog:chromeOptions: {debuggerAddress: localhost:54552}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 52fc2ada9d72a9e056771957f2dba8c2\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\n\tat org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:932)\n\tat org.openqa.selenium.support.ui.ExpectedConditions$28.apply(ExpectedConditions.java:806)\n\tat org.openqa.selenium.support.ui.ExpectedConditions$28.apply(ExpectedConditions.java:802)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)\n\tat utility.SeleniumUtility.isAlertAppear(SeleniumUtility.java:218)\n\tat StepFiles.UI.PreconditionSteps.userShouldBeOnLoginPage(PreconditionSteps.java:25)\n\tat ✽.When open Homepage(UITest/ValidationForCityWeather.feature:40)\n",
+              "status": "failed"
+            },
+            "line": 40,
+            "name": "open Homepage",
+            "match": {
+              "location": "PreconditionSteps.userShouldBeOnLoginPage()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
               "status": "skipped"
             },
-            "line": 7,
-            "name": "user should see the \"Log in | Typeform\"",
+            "line": 41,
+            "name": "user should see the home page title \"NDTV: Latest News, India News, Breaking News, Business, Bollywood, Cricket, Videos \u0026 Photos\"",
             "match": {
               "arguments": [
                 {
-                  "val": "Log in | Typeform",
+                  "val": "NDTV: Latest News, India News, Breaking News, Business, Bollywood, Cricket, Videos \u0026 Photos",
+                  "offset": 37
+                }
+              ],
+              "location": "HomePageSteps.userShouldSeeThe(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 42,
+            "name": "user click on \"Weather\" option from header menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Weather",
+                  "offset": 15
+                }
+              ],
+              "location": "HomePageSteps.userClickOnOptionFromHeaderMenu(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 43,
+            "name": "user should see the weather page title \"NDTV Weather - Weather in your Indian City\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "NDTV Weather - Weather in your Indian City",
+                  "offset": 40
+                }
+              ],
+              "location": "WeatherPageSteps.userShouldSeeTheWeatherPageTitle(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 44,
+            "name": "user search for \"Ahmedabad\" in Pin your city search",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ahmedabad",
+                  "offset": 17
+                }
+              ],
+              "location": "WeatherPageSteps.userSearchForInPinYourCitySearch(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 45,
+            "name": "user should see the \"Ahmedabad\" Pin your city search result",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ahmedabad",
                   "offset": 21
                 }
               ],
-              "location": "LoginPageSteps.userShouldSeeThe(String)"
+              "location": "WeatherPageSteps.userShouldSeeThePinYourCitySearchResult(String)"
             },
             "keyword": "Then "
           },
@@ -94,16 +497,16 @@
             "result": {
               "status": "skipped"
             },
-            "line": 8,
-            "name": "user enter username as \"test@test.com\"",
+            "line": 46,
+            "name": "user select \"Ahmedabad\" from Pin your city search result",
             "match": {
               "arguments": [
                 {
-                  "val": "test@test.com",
-                  "offset": 24
+                  "val": "Ahmedabad",
+                  "offset": 13
                 }
               ],
-              "location": "LoginPageSteps.userEnterUsernameAs(String)"
+              "location": "WeatherPageSteps.userSelectFromPinYourCitySearchResult(String)"
             },
             "keyword": "When "
           },
@@ -111,54 +514,161 @@
             "result": {
               "status": "skipped"
             },
-            "line": 9,
-            "name": "user enter password as \"Test@1234\"",
+            "line": 47,
+            "name": "user should see the \"Ahmedabad\" city in map",
             "match": {
               "arguments": [
                 {
-                  "val": "Test@1234",
-                  "offset": 24
+                  "val": "Ahmedabad",
+                  "offset": 21
                 }
               ],
-              "location": "LoginPageSteps.userEnterPasswordAs(String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 10,
-            "name": "user click on login button",
-            "match": {
-              "location": "LoginPageSteps.userClickOnLoginButton()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 11,
-            "name": "user get error message as \"Your login info isn\u0027t right. Try again, or reset your password if it slipped your mind. \"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Your login info isn\u0027t right. Try again, or reset your password if it slipped your mind. ",
-                  "offset": 27
-                }
-              ],
-              "location": "LoginPageSteps.userGetErrorMessageAs(String)"
+              "location": "WeatherPageSteps.userShouldSeeTheCityInMap(String)"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 48,
+            "name": "user click on the \"Ahmedabad\" city in map",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ahmedabad",
+                  "offset": 19
+                }
+              ],
+              "location": "WeatherPageSteps.userClickOnTheCityInMap(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 49,
+            "name": "user should see the popup of \"Ahmedabad\" detail in the map",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ahmedabad",
+                  "offset": 30
+                }
+              ],
+              "location": "WeatherPageSteps.userShouldSeeThePopupOfDetailInTheMap(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 50,
+            "name": "user store the data for city \"Ahmedabad\" for UI",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ahmedabad",
+                  "offset": 30
+                }
+              ],
+              "location": "WeatherPageSteps.userStoreTheDataForCityForUI(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 51,
+            "name": "user get the data for endpoint \"data/2.5/weather\" with pathParam",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data/2.5/weather",
+                  "offset": 32
+                }
+              ],
+              "location": "WeatherDataSteps.userGetTheDataForEndpointWithPathParam(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "q",
+                  "Ahmedabad"
+                ],
+                "line": 52
+              },
+              {
+                "cells": [
+                  "appid",
+                  "7fe67bf08c80ded756e598d6f8fedaea"
+                ],
+                "line": 53
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 54,
+            "name": "validate the status code should be \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 36
+                }
+              ],
+              "location": "CommonSteps.validateTheStatusCodeShouldBe(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 55,
+            "name": "user store the data for the city \"Ahmedabad\" from api",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ahmedabad",
+                  "offset": 34
+                }
+              ],
+              "location": "WeatherDataSteps.userStoreTheDataForTheCityFromApi(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 56,
+            "name": "compare the humidity data for UI and API and validate that both should be nealy same",
+            "match": {
+              "location": "ComparatorSteps.compareTheHumidityDataForUIAndAPIAndValidateThatBothShouldBeNealySame()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 38,
+            "name": "@APIAndUI"
           }
         ]
       }
     ],
-    "name": "ValidationTestForLogin",
+    "name": "ValidationForCityWeather",
     "description": "",
-    "id": "validationtestforlogin",
+    "id": "validationforcityweather",
     "keyword": "Feature",
-    "uri": "UITest/ValidationTestForLogin.feature"
+    "uri": "UITest/ValidationForCityWeather.feature"
   }
 ]

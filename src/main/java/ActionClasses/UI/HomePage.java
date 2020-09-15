@@ -26,11 +26,11 @@ public class HomePage extends SeleniumUtility {
         return isTitle(pageTitle,timeout);
     }
 
-    public boolean isMenuAvailableInHeader(String menu,int wait) throws InterruptedException {
+    public boolean isMenuAvailableInHeader(String menu,int wait)  {
         return getAllElementsTextFromElementList(headerMenus,wait).contains(menu.toUpperCase());
     }
 
-    public void clickOnMenu(String menu,int wait) throws InterruptedException {
+    public void clickOnMenu(String menu,int wait)  {
         try {
             if (!isMenuAvailableInHeader(menu,wait)) {
                 clickOnElement(moreIcon, 0);

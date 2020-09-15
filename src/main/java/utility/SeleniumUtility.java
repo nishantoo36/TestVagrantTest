@@ -139,7 +139,7 @@ public class SeleniumUtility {
         return str.trim().replace(" ", "").replaceAll("\\s", "");
     }
 
-    protected WebElement getElementByTextFromElementList(List<WebElement> elements, String textToCompare, int timeout) throws InterruptedException {
+    protected WebElement getElementByTextFromElementList(List<WebElement> elements, String textToCompare, int timeout) {
         if (isElementListAvailable(elements, timeout)) {
             for (WebElement ele : elements) {
                 if (ele.getText().equals(textToCompare)) {
@@ -153,7 +153,7 @@ public class SeleniumUtility {
         return null;
     }
 
-    public WebElement getElementByAttributeTextFromElementList(List<WebElement> elements, String attribute,String textToCompare, int timeout) throws InterruptedException {
+    public WebElement getElementByAttributeTextFromElementList(List<WebElement> elements, String attribute,String textToCompare, int timeout) {
         if (isElementListAvailable(elements, timeout)) {
             for (WebElement ele : elements) {
                 if (ele.getAttribute(attribute).equals(textToCompare)) {
@@ -167,7 +167,7 @@ public class SeleniumUtility {
         return null;
     }
 
-    public List<String> getAllElementsTextFromElementList(List<WebElement> elements, int timeOut) throws InterruptedException {
+    public List<String> getAllElementsTextFromElementList(List<WebElement> elements, int timeOut){
         List<String> elementData = new ArrayList<String>(elements.size());
         if (isElementListAvailable(elements, timeOut)) {
             for (WebElement val : elements) {
@@ -180,7 +180,7 @@ public class SeleniumUtility {
         }
     }
 
-    public List<String> getAllElementsAttributeFromElementList(List<WebElement> elements,String attribute, int timeOut) throws InterruptedException {
+    public List<String> getAllElementsAttributeFromElementList(List<WebElement> elements,String attribute, int timeOut) {
         List<String> elementData = new ArrayList<String>(elements.size());
         if (isElementListAvailable(elements, timeOut)) {
             for (WebElement val : elements) {
@@ -193,9 +193,9 @@ public class SeleniumUtility {
         }
     }
 
-    public boolean isElementListAvailable(List<WebElement> elements, int timeoutVal) throws InterruptedException {
+    public boolean isElementListAvailable(List<WebElement> elements, int timeoutVal)  {
         boolean ret = false;
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 10; i++) {
             try {
                 fluentWait(timeoutVal).until(ExpectedConditions.visibilityOf(elements.get(0)));
                 if (elements.get(0).isDisplayed()) {
@@ -203,7 +203,6 @@ public class SeleniumUtility {
                     return ret;
                 }
             } catch (IndexOutOfBoundsException e) {
-                Thread.sleep(1000);
                 continue;
             } catch (TimeoutException e) {
                 e.printStackTrace();

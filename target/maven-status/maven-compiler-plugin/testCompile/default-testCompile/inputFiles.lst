@@ -1,5 +1,9 @@
-/Users/nishantpatel/Desktop/newTempProject/TypeFormLoginAutomation/UI/src/test/java/StepFiles/PreconditionSteps.java
-/Users/nishantpatel/Desktop/newTempProject/TypeFormLoginAutomation/UI/src/test/java/StepFiles/LoginPageSteps.java
+/Users/nishantpatel/Desktop/newTempProject/TypeFormLoginAutomation/UI/src/test/java/StepFiles/API/WeatherDataSteps.java
 /Users/nishantpatel/Desktop/newTempProject/TypeFormLoginAutomation/UI/src/test/java/StepFiles/Hooks.java
 /Users/nishantpatel/Desktop/newTempProject/TypeFormLoginAutomation/UI/src/test/java/runner/TestRunner.java
+/Users/nishantpatel/Desktop/newTempProject/TypeFormLoginAutomation/UI/src/test/java/StepFiles/UI/WeatherPageSteps.java
+/Users/nishantpatel/Desktop/newTempProject/TypeFormLoginAutomation/UI/src/test/java/StepFiles/ComparatorSteps.java
+/Users/nishantpatel/Desktop/newTempProject/TypeFormLoginAutomation/UI/src/test/java/StepFiles/UI/PreconditionSteps.java
+/Users/nishantpatel/Desktop/newTempProject/TypeFormLoginAutomation/UI/src/test/java/StepFiles/API/CommonSteps.java
+/Users/nishantpatel/Desktop/newTempProject/TypeFormLoginAutomation/UI/src/test/java/StepFiles/UI/HomePageSteps.java
 /Users/nishantpatel/Desktop/newTempProject/TypeFormLoginAutomation/UI/src/test/java/StepFiles/Logging.java

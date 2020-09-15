@@ -40,11 +40,11 @@ public class WeatherPage extends SeleniumUtility {
         return isTitle(pageTitle, timeout);
     }
 
-    public boolean isCityAvailableInSearchList(String city, int timeout) throws InterruptedException {
+    public boolean isCityAvailableInSearchList(String city, int timeout)  {
         return getAllElementsAttributeFromElementList(citySearchData, "id", timeout).contains(city);
     }
 
-    public void selectCityFromSearchResult(String city, int timeout) throws InterruptedException {
+    public void selectCityFromSearchResult(String city, int timeout) {
         if (isCityAvailableInSearchList(city, timeout)) {
             WebElement ele=  getElementByAttributeTextFromElementList(citySearchData, "id", city, 0);
             if(!ele.isSelected()){
@@ -57,11 +57,11 @@ public class WeatherPage extends SeleniumUtility {
         clearAndEnterValue(searchBox, city, 10);
     }
 
-    public boolean isCityAppearsOnMap(String city, int timeout) throws InterruptedException {
+    public boolean isCityAppearsOnMap(String city, int timeout){
         return getAllElementsTextFromElementList(citiesOnMap, timeout).contains(city);
     }
 
-    public boolean isCityWeatherDataAppearsAfterClickingOnTheCity(String city, int timeout) throws InterruptedException {
+    public boolean isCityWeatherDataAppearsAfterClickingOnTheCity(String city, int timeout)  {
         if (isElementAvailable(weatherDetailsPopup, 1)) {
             weatherDataForCity = getText(weatherDetailsPopup, 1);
             cityData.add(0, city);
@@ -76,7 +76,7 @@ public class WeatherPage extends SeleniumUtility {
         }
     }
 
-    public void clickOnTheCity(String city) throws InterruptedException {
+    public void clickOnTheCity(String city) {
         clickOnElement(getElementByTextFromElementList(citiesOnMap, city, 0), 0);
     }
 

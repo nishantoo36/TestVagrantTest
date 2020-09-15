@@ -1,1 +1,1 @@
-UITest/ValidationTestForLogin.feature:6
+UITest/ValidationForCityWeather.feature:17:39
